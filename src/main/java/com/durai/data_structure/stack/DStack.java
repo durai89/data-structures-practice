@@ -3,22 +3,22 @@ package com.durai.data_structure.stack;
 public interface DStack<T> {
 
     /*
-        Pushes element to top of the stack
+        Pushes element to top of the stack - O(1)
     */
     public void push(T element);
 
     /*
-        Removes element from top of the stack
+        Removes element from top of the stack - O(1)
     */
     public T pop();
 
     /*
-        Gets an element from the top of the stack without removing it
+        Gets an element from the top of the stack without removing it -O(1)
     */
     public T peek();
 
     /*
-        Retrieves an element from the stack - Will remove any other elements that exists above this element in the stack(LIFO)
+        Retrieves an element from the stack - Will remove any other elements that exists above this element in the stack(LIFO)-O(n)
     */
     public T get(T element);
 

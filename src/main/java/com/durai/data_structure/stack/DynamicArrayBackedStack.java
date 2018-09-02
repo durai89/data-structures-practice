@@ -3,7 +3,7 @@ package com.durai.data_structure.stack;
 import java.util.Arrays;
 
 /*
-    Java Stack Data Structure implementation
+    Java Stack Data Structure implementation - Dynamic array backed
 */
 public class DynamicArrayBackedStack<T> implements DStack<T> {
 

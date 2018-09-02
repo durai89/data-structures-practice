@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /*
-    Java Stack Data Structure implementation
+    Java Stack Data Structure implementation - Backed by linked list
 */
 public class ListBackedStack<T> implements DStack<T> {
 
