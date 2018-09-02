@@ -27,7 +27,7 @@ public class ListBackedStack<T> implements DStack<T> {
         if (size() == 0) {
             throw new IllegalStateException("Illegal operation - popping element from empty stack");
         }
-        return data.remove(data.size() - 1);
+        return data.remove(size() - 1);
     }
 
     @Override

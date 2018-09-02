@@ -21,7 +21,7 @@ public class DynamicArrayBackedStack<T> implements DStack<T> {
 
     public DynamicArrayBackedStack(int initialCapacity, int capacityIncrementCount) {
         this.data = (T[]) new Object[initialCapacity];
-        this.stackPointer = 0;
+        this.stackPointer = -1;
         this.capacityIncrementCount = capacityIncrementCount;
     }
 
@@ -31,9 +31,9 @@ public class DynamicArrayBackedStack<T> implements DStack<T> {
             throw new IllegalArgumentException("Invalid insert operation - element is null");
         }
         if (stackPointer > data.length) {
-            increaseCapacity(data, capacityIncrementCount);
+            Arrays.copyOf(data, capacityIncrementCount);
         }
-        data[stackPointer++] = element;
+        data[++stackPointer] = element;
     }
 
     @Override
@@ -41,8 +41,9 @@ public class DynamicArrayBackedStack<T> implements DStack<T> {
         if (size() == 0) {
             throw new IllegalStateException("Illegal operation - popping element from empty stack");
         }
-        T element = data[--stackPointer];
-        data[stackPointer + 1] = null;
+        T element = data[stackPointer];
+        data[stackPointer] = null; // Leave it to java's garbage collection
+        stackPointer--;
         return element;
     }
 
@@ -51,7 +52,7 @@ public class DynamicArrayBackedStack<T> implements DStack<T> {
         if (size() == 0) {
             throw new IllegalStateException("Illegal operation - peek access on a empty stack");
         }
-        return data[stackPointer-1];
+        return data[stackPointer];
     }
 
     @Override
@@ -91,11 +92,7 @@ public class DynamicArrayBackedStack<T> implements DStack<T> {
 
     @Override
     public int size() {
-        return stackPointer;
-    }
-
-    private void increaseCapacity(T[] dataArray, int capacityIncrementCount) {
-        Arrays.copyOf(dataArray, capacityIncrementCount);
+        return stackPointer + 1;
     }
 
 }

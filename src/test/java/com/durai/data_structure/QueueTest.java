@@ -1,92 +1,40 @@
 package com.durai.data_structure;
 
-import com.durai.data_structure.stack.DStack;
-import com.durai.data_structure.stack.DynamicArrayBackedStack;
-import com.durai.data_structure.stack.ListBackedStack;
+import com.durai.data_structure.queue.DQueue;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class StackTest {
+public class QueueTest {
 
     @Test
     public void dynamicArrayBackedStackTest() {
-        DStack<String> stack = new DynamicArrayBackedStack<String>();
+        DQueue<String> queue = new DQueue<String>();
         //Size
-        assertTrue(stack.size() == 0);
+        assertTrue(queue.size() == 0);
 
-        //Push
-        stack.push("Stack Push Test1");
-        stack.push("Stack Push Test2");
-        stack.push("Stack Push Test3");
-        stack.push("Stack Push Test4");
-        assertTrue(stack.size() == 4);
+        //enqueue
+        queue.enQueue("element1");
+        queue.enQueue("element2");
+        queue.enQueue("element3");
+        queue.enQueue("element4");
+        assertTrue(queue.size() == 4);
 
-        //peek
-        assertEquals("Stack Push Test4", stack.peek());
+        //dequeue
+        assertEquals("element1", queue.deQueue());
+        assertTrue(queue.size() == 3);
 
-        //contains
-        assertTrue(stack.contains("Stack Push Test1"));
-        assertTrue(stack.contains("Stack Push Test2"));
-        assertTrue(stack.contains("Stack Push Test3"));
-        assertTrue(stack.contains("Stack Push Test4"));
-
-        //Index
-        assertEquals(0, stack.indexOf("Stack Push Test1"));
-        assertEquals(1, stack.indexOf("Stack Push Test2"));
-        assertEquals(2, stack.indexOf("Stack Push Test3"));
-        assertEquals(3, stack.indexOf("Stack Push Test4"));
-
-        //Pop
-        stack.pop();
-        assertTrue(stack.size() == 3);
+        //index
+        assertEquals(0, queue.indexOf("element2"));
+        assertEquals(1, queue.indexOf("element3"));
+        assertEquals(2, queue.indexOf("element4"));
 
         //Get Element
-        assertEquals("Stack Push Test2", stack.get("Stack Push Test2"));
-        assertTrue(stack.size() == 1);
-        assertEquals("Stack Push Test1", stack.get("Stack Push Test1"));
-        assertTrue(stack.size() == 0);
-
-    }
-
-    @Test
-    public void listBackedStackTest() {
-        DStack<String> stack = new ListBackedStack<String>();
-        //Size
-        assertTrue(stack.size() == 0);
-
-        //Push
-        stack.push("Stack Push Test1");
-        stack.push("Stack Push Test2");
-        stack.push("Stack Push Test3");
-        stack.push("Stack Push Test4");
-        assertTrue(stack.size() == 4);
-
-        //peek
-        assertEquals("Stack Push Test4", stack.peek());
-
-        //contains
-        assertTrue(stack.contains("Stack Push Test1"));
-        assertTrue(stack.contains("Stack Push Test2"));
-        assertTrue(stack.contains("Stack Push Test3"));
-        assertTrue(stack.contains("Stack Push Test4"));
-
-        //Index
-        assertEquals(0, stack.indexOf("Stack Push Test1"));
-        assertEquals(1, stack.indexOf("Stack Push Test2"));
-        assertEquals(2, stack.indexOf("Stack Push Test3"));
-        assertEquals(3, stack.indexOf("Stack Push Test4"));
-
-        //Pop
-        stack.pop();
-        assertTrue(stack.size() == 3);
-
-        //Get Element
-        assertEquals("Stack Push Test2", stack.get("Stack Push Test2"));
-        assertTrue(stack.size() == 1);
-        assertEquals("Stack Push Test1", stack.get("Stack Push Test1"));
-        assertTrue(stack.size() == 0);
+        assertEquals("element2", queue.get("element2"));
+        assertTrue(queue.size() == 2);
+        assertEquals("element4", queue.get("element4"));
+        assertTrue(queue.size() == 0);
 
     }
 }
