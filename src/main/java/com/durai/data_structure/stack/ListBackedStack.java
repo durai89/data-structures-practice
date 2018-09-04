@@ -3,9 +3,6 @@ package com.durai.data_structure.stack;
 import java.util.LinkedList;
 import java.util.List;
 
-/*
-    Java Stack Data Structure implementation - Backed by linked list
-*/
 public class ListBackedStack<T> implements DStack<T> {
 
     private final List<T> data;
@@ -35,7 +32,7 @@ public class ListBackedStack<T> implements DStack<T> {
         if (size() == 0) {
             throw new IllegalStateException("Illegal operation - peek access on a empty stack");
         }
-        return data.get(size()-1);
+        return data.get(size() - 1);
     }
 
     @Override

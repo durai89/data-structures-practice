@@ -1,6 +1,7 @@
 package com.durai.data_structure;
 
 import com.durai.data_structure.queue.DQueue;
+import org.junit.Rule;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ import static org.junit.Assert.assertTrue;
 public class QueueTest {
 
     @Test
-    public void dynamicArrayBackedStackTest() {
+    public void queueTest() {
         DQueue<String> queue = new DQueue<String>();
         //Size
         assertTrue(queue.size() == 0);

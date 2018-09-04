@@ -2,9 +2,6 @@ package com.durai.data_structure.queue;
 
 import java.util.Arrays;
 
-/*
-    Queue Implementation - FIFO
-*/
 public class DQueue<T> {
 
     private T[] data;
@@ -23,6 +20,7 @@ public class DQueue<T> {
         this.capacityIncrementCount = capacityIncrementCount;
     }
 
+    //Push element to the top of the queue - Big O Performance - O(1)
     public void enQueue(T element) {
         if (element == null) {
             throw new IllegalArgumentException("Invalid insert operation - element is null");
@@ -36,13 +34,20 @@ public class DQueue<T> {
         }
     }
 
+    //Removes element from the top of the queue - Big O Performance - O(1)
     public T deQueue() {
         if (topIndex < 0) {
             throw new IllegalStateException("Illegal dequeue operation - queue is empty");
         }
         T element = data[topIndex];
         data[topIndex] = null; //Remove object reference for Java garbage collector to pick it
-        topIndex++;
+
+        if (topIndex == bottomIndex) {
+            topIndex = -1;
+            bottomIndex = -1;
+        } else {
+            topIndex++;
+        }
         return element;
     }
 

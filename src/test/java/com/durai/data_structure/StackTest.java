@@ -5,6 +5,8 @@ import com.durai.data_structure.stack.DynamicArrayBackedStack;
 import com.durai.data_structure.stack.ListBackedStack;
 import org.junit.Test;
 
+import java.util.Stack;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -17,35 +19,35 @@ public class StackTest {
         assertTrue(stack.size() == 0);
 
         //Push
-        stack.push("Stack Push Test1");
-        stack.push("Stack Push Test2");
-        stack.push("Stack Push Test3");
-        stack.push("Stack Push Test4");
+        stack.push("element1");
+        stack.push("element2");
+        stack.push("element3");
+        stack.push("element4");
         assertTrue(stack.size() == 4);
 
         //peek
-        assertEquals("Stack Push Test4", stack.peek());
+        assertEquals("element4", stack.peek());
 
         //contains
-        assertTrue(stack.contains("Stack Push Test1"));
-        assertTrue(stack.contains("Stack Push Test2"));
-        assertTrue(stack.contains("Stack Push Test3"));
-        assertTrue(stack.contains("Stack Push Test4"));
+        assertTrue(stack.contains("element1"));
+        assertTrue(stack.contains("element2"));
+        assertTrue(stack.contains("element3"));
+        assertTrue(stack.contains("element4"));
 
         //Index
-        assertEquals(0, stack.indexOf("Stack Push Test1"));
-        assertEquals(1, stack.indexOf("Stack Push Test2"));
-        assertEquals(2, stack.indexOf("Stack Push Test3"));
-        assertEquals(3, stack.indexOf("Stack Push Test4"));
+        assertEquals(0, stack.indexOf("element1"));
+        assertEquals(1, stack.indexOf("element2"));
+        assertEquals(2, stack.indexOf("element3"));
+        assertEquals(3, stack.indexOf("element4"));
 
         //Pop
         stack.pop();
         assertTrue(stack.size() == 3);
 
         //Get Element
-        assertEquals("Stack Push Test2", stack.get("Stack Push Test2"));
+        assertEquals("element2", stack.get("element2"));
         assertTrue(stack.size() == 1);
-        assertEquals("Stack Push Test1", stack.get("Stack Push Test1"));
+        assertEquals("element1", stack.get("element1"));
         assertTrue(stack.size() == 0);
 
     }
@@ -57,35 +59,35 @@ public class StackTest {
         assertTrue(stack.size() == 0);
 
         //Push
-        stack.push("Stack Push Test1");
-        stack.push("Stack Push Test2");
-        stack.push("Stack Push Test3");
-        stack.push("Stack Push Test4");
+        stack.push("element1");
+        stack.push("element2");
+        stack.push("element3");
+        stack.push("element4");
         assertTrue(stack.size() == 4);
 
         //peek
-        assertEquals("Stack Push Test4", stack.peek());
+        assertEquals("element4", stack.peek());
 
         //contains
-        assertTrue(stack.contains("Stack Push Test1"));
-        assertTrue(stack.contains("Stack Push Test2"));
-        assertTrue(stack.contains("Stack Push Test3"));
-        assertTrue(stack.contains("Stack Push Test4"));
+        assertTrue(stack.contains("element1"));
+        assertTrue(stack.contains("element2"));
+        assertTrue(stack.contains("element3"));
+        assertTrue(stack.contains("element4"));
 
         //Index
-        assertEquals(0, stack.indexOf("Stack Push Test1"));
-        assertEquals(1, stack.indexOf("Stack Push Test2"));
-        assertEquals(2, stack.indexOf("Stack Push Test3"));
-        assertEquals(3, stack.indexOf("Stack Push Test4"));
+        assertEquals(0, stack.indexOf("element1"));
+        assertEquals(1, stack.indexOf("element2"));
+        assertEquals(2, stack.indexOf("element3"));
+        assertEquals(3, stack.indexOf("element4"));
 
         //Pop
         stack.pop();
         assertTrue(stack.size() == 3);
 
         //Get Element
-        assertEquals("Stack Push Test2", stack.get("Stack Push Test2"));
+        assertEquals("element2", stack.get("element2"));
         assertTrue(stack.size() == 1);
-        assertEquals("Stack Push Test1", stack.get("Stack Push Test1"));
+        assertEquals("element1", stack.get("element1"));
         assertTrue(stack.size() == 0);
 
     }
