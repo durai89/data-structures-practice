@@ -1,11 +1,9 @@
-package com.durai.data_structure;
+package com.durai.ds;
 
-import com.durai.data_structure.stack.DStack;
-import com.durai.data_structure.stack.DynamicArrayBackedStack;
-import com.durai.data_structure.stack.ListBackedStack;
+import com.durai.ds.stack.DStack;
+import com.durai.ds.stack.DynamicArrayBackedStack;
+import com.durai.ds.stack.ListBackedStack;
 import org.junit.Test;
-
-import java.util.Stack;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -28,17 +26,11 @@ public class StackTest {
         //peek
         assertEquals("element4", stack.peek());
 
-        //contains
-        assertTrue(stack.contains("element1"));
-        assertTrue(stack.contains("element2"));
-        assertTrue(stack.contains("element3"));
-        assertTrue(stack.contains("element4"));
-
         //Index
-        assertEquals(0, stack.indexOf("element1"));
-        assertEquals(1, stack.indexOf("element2"));
-        assertEquals(2, stack.indexOf("element3"));
-        assertEquals(3, stack.indexOf("element4"));
+        assertEquals(0, stack.search("element1"));
+        assertEquals(1, stack.search("element2"));
+        assertEquals(2, stack.search("element3"));
+        assertEquals(3, stack.search("element4"));
 
         //Pop
         stack.pop();
@@ -68,17 +60,11 @@ public class StackTest {
         //peek
         assertEquals("element4", stack.peek());
 
-        //contains
-        assertTrue(stack.contains("element1"));
-        assertTrue(stack.contains("element2"));
-        assertTrue(stack.contains("element3"));
-        assertTrue(stack.contains("element4"));
-
         //Index
-        assertEquals(0, stack.indexOf("element1"));
-        assertEquals(1, stack.indexOf("element2"));
-        assertEquals(2, stack.indexOf("element3"));
-        assertEquals(3, stack.indexOf("element4"));
+        assertEquals(0, stack.search("element1"));
+        assertEquals(1, stack.search("element2"));
+        assertEquals(2, stack.search("element3"));
+        assertEquals(3, stack.search("element4"));
 
         //Pop
         stack.pop();

@@ -1,4 +1,4 @@
-package com.durai.data_structure.List;
+package com.durai.ds.List;
 
 public class DLinkedList<T> implements DList<T> {
 
@@ -119,4 +119,5 @@ public class DLinkedList<T> implements DList<T> {
             this.nextNode = nextNode;
         }
     }
+
 }

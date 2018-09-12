@@ -1,7 +1,6 @@
-package com.durai.data_structure;
+package com.durai.ds;
 
-import com.durai.data_structure.queue.DQueue;
-import org.junit.Rule;
+import com.durai.ds.queue.DQueue;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

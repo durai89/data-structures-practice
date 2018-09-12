@@ -1,4 +1,4 @@
-package com.durai.data_structure.stack;
+package com.durai.ds.stack;
 
 public interface DStack<T> {
 
@@ -10,9 +10,7 @@ public interface DStack<T> {
 
     T get(T element);
 
-    int indexOf(T element);
-
-    boolean contains(T element);
+    int search(T element);
 
     int size();
 

@@ -1,6 +1,6 @@
-package com.durai.data_structure;
+package com.durai.ds;
 
-import com.durai.data_structure.List.DLinkedList;
+import com.durai.ds.List.DLinkedList;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

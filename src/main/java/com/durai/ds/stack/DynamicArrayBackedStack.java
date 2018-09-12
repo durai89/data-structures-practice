@@ -1,4 +1,4 @@
-package com.durai.data_structure.stack;
+package com.durai.ds.stack;
 
 import java.util.Arrays;
 
@@ -58,7 +58,7 @@ public class DynamicArrayBackedStack<T> implements DStack<T> {
             throw new IllegalArgumentException("Invalid argument-Search argument is null");
         }
 
-        int index = indexOf(element);
+        int index = search(element);
 
         if (index < 0) {
             throw new IllegalStateException("Element is not present in the stack");
@@ -73,18 +73,13 @@ public class DynamicArrayBackedStack<T> implements DStack<T> {
     }
 
     @Override
-    public int indexOf(T element) {
+    public int search(T element) {
         for (int i = 0; i < size(); i++) {
             if (data[i] == element) {
                 return i;
             }
         }
         return -1;
-    }
-
-    @Override
-    public boolean contains(T element) {
-        return indexOf(element) >= 0 ? true : false;
     }
 
     @Override

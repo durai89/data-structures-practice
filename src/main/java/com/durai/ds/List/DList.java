@@ -1,4 +1,4 @@
-package com.durai.data_structure.List;
+package com.durai.ds.List;
 
 public interface DList<T> {
 

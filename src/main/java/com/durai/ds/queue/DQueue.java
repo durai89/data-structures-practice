@@ -1,4 +1,4 @@
-package com.durai.data_structure.queue;
+package com.durai.ds.queue;
 
 import java.util.Arrays;
 

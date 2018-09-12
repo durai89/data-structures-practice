@@ -1,4 +1,4 @@
-package com.durai.data_structure.stack;
+package com.durai.ds.stack;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -41,7 +41,7 @@ public class ListBackedStack<T> implements DStack<T> {
             throw new IllegalArgumentException("Invalid argument-Search argument is null");
         }
 
-        int index = indexOf(element);
+        int index = search(element);
 
         if (index < 0) {
             throw new IllegalStateException("Element is not present in the stack");
@@ -56,13 +56,8 @@ public class ListBackedStack<T> implements DStack<T> {
     }
 
     @Override
-    public int indexOf(T element) {
+    public int search(T element) {
         return data.indexOf(element);
-    }
-
-    @Override
-    public boolean contains(T element) {
-        return indexOf(element) >= 0 ? true : false;
     }
 
     @Override
