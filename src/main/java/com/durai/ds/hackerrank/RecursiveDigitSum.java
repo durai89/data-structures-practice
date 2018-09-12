@@ -2,6 +2,8 @@ package com.durai.ds.hackerrank;
 
 import java.math.BigInteger;
 
+//Problem : https://www.hackerrank.com/challenges/recursive-digit-sum/problem
+
 public class RecursiveDigitSum {
 
     private static BigInteger ZERO_BIGINT = BigInteger.valueOf(0);
