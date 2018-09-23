@@ -1,6 +1,6 @@
 package com.durai.ds;
 
-import com.durai.ds.List.SingleLinkedList;
+import com.durai.ds.list.SingleLinkedList;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

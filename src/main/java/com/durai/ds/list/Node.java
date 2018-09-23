@@ -1,4 +1,4 @@
-package com.durai.ds.List;
+package com.durai.ds.list;
 
 class Node<T> {
     private T data;
@@ -19,5 +19,4 @@ class Node<T> {
     public void setNextNode(Node<T> nextNode) {
         this.nextNode = nextNode;
     }
-
 }

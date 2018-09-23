@@ -1,4 +1,4 @@
-package com.durai.ds.List;
+package com.durai.ds.list;
 
 public class SingleLinkedList<T> implements List<T> {
 
