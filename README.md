@@ -1,4 +1,4 @@
-# data-structures-practice
+# data-structures-java
 
 Simple practice exercises 
   - Implement own data structures
