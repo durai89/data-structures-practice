@@ -1,5 +1,6 @@
 package com.durai.ds.hackerrank;
 
+import com.durai.competitive.problems.hackerrank.RecursiveDigitSum;
 import org.junit.Assert;
 import org.junit.Test;
 
