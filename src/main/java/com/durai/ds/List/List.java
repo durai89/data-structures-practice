@@ -1,8 +1,12 @@
 package com.durai.ds.List;
 
-public interface DList<T> {
+public interface List<T> {
 
     void add(T data);
+
+    void add(T data, int index);
+
+    //TODO : Sorted Insert
 
     T remove();
 
@@ -14,6 +18,10 @@ public interface DList<T> {
 
     int size();
 
+    boolean isEmpty();
+
     boolean contains(T data);
+
+    void reverse();
 
 }
