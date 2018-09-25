@@ -1,4 +1,4 @@
 # data-structures-java
 
-  - Implement own data structures
+  - Implement data structures with some util methods using java
   - Solution for hackerrank, geeksofgeeks, carrercup problems
