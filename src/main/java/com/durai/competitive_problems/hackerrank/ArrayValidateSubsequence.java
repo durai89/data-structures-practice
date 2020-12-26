@@ -6,8 +6,6 @@ class Program {
     while (i < array.size() && j < sequence.size()) {
       if(array.get(i) == sequence.get(j)) {
 	j++;
-      } else {
-	i++;
       }
       i++;
     }
